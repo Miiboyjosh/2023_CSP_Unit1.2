@@ -19,8 +19,7 @@ def get_names(file_name):
         index = 0
 
         # TODO 1: use a while loop to read the leader name from the line (format is "leader_name,leader_score")
-        while
-
+while
         # TODO 2: add the player name to the names list
 
     leaderboard_file.close()
