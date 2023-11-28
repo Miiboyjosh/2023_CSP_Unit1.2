@@ -15,7 +15,7 @@ timer = 5
 counter_interval = 1000
 timer_up = False
 score = 0
-leaderboard_file_name = "a122_leaderboard.txt"
+leaderboard_file_name = "a122_leaderboard.py"
 player_name = input("Please Enter Your Name:")
 
 
