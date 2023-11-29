@@ -129,5 +129,5 @@ def manage_leaderboard():
 # ----------events----------
 start_game()
 wn = trtl.Screen()
-wn.bgcolor("white smoke")
+wn.bgcolor("orange")
 wn.mainloop()
