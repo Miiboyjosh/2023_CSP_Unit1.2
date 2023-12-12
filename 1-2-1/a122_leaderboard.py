@@ -56,6 +56,7 @@ def get_scores(file_name):
 
 
 # update leaderboard by inserting the current player and score to the list at the correct position
+
 def update_leaderboard(file_name, leader_names, leader_scores, player_name, player_score):
     index = 0
     # TODO 8: loop through all the scores in the existing leaderboard list
