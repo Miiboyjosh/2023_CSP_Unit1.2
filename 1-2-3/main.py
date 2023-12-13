@@ -20,17 +20,20 @@ def draw_pear(active_pear):
 def draw_apple(active_apple):
   active_apple.shape(apple_image)
   wn.update()
-def fall_apple(active_apple):
-  active_apple.penup()
-  active_apple.goto(0, -155)
-  drawer.color("white")
-  drawer.write("A", font=("Arial"))
-def press_key():
-  drawer.color("white")
-  drawer.write("A",font=("Arial"))
 
+def Draw_An_A():
+  drawer.color("white")
+  drawer.penup()
+  drawer.speed(0)
+  drawer.goto(-10, 125)
+  drawer.write("A", font=("Arial", 40, "bold"))
+  drawer.pendown()
+def fall_apple():
+  apple.penup()
+  apple.goto(0, -150)
 #-----function calls-----
 draw_apple(apple)
-fall_apple(apple)
-wn.onkeypress(press_key,"a")
+wn.listen()
+Draw_An_A()
+wn.onkeypress(fall_apple, "a")
 wn.mainloop()
