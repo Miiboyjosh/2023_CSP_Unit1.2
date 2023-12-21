@@ -1,5 +1,5 @@
 import turtle as trtl
-import random as rand
+import random as randint
 '''
 x = starting distance
 y = incremental distance
@@ -21,6 +21,8 @@ door_width = 10
 wall_length = 25
 wall_increment = 10
 iteration = 0
+door = randint(3, 9)
+barrier = randint(3, 9)
 def drawSpiral():
     global wall_length, wall_increment, iteration
     maze.goto(0, 0)
@@ -28,23 +30,28 @@ def drawSpiral():
     for line in range(25):
         if iteration > 3:
             maze.penup()
-            maze.width(5)
+            maze.width(3)
             maze.left(90)
             drawDoor()
+            drawBarrier()
             maze.forward(wall_length + wall_increment - 10 - door_width * 2)
             wall_length += wall_increment
         iteration += 1
     maze.hideturtle()
 def drawDoor():
-    maze.forward(10)
-    maze.penup()
-    maze.forward(door_width * 2)
-    maze.pendown()
-    maze.forward(40)
-    maze.left(90)
-    maze.forward(door_width * 2)
-    maze.back(door_width * 2)
-    maze.right(90)
+    if iteration:
+        maze.forward(10)
+        maze.penup()
+        maze.forward(door_width * 2)
+        maze.pendown()
+    # For the barriers
+def drawBarrier():
+    if iteration:
+        maze.forward(40)
+        maze.left(90)
+        maze.forward(door_width * 2)
+        maze.back(door_width * 2)
+        maze.right(90)
 
 
 drawSpiral()
