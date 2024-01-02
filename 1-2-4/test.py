@@ -21,8 +21,7 @@ door_width = 10
 wall_length = 25
 wall_increment = 10
 iteration = 0
-door = randint(3, 9)
-barrier = randint(3, 9)
+barrier_length = maze.forward(randint)
 def drawSpiral():
     global wall_length, wall_increment, iteration
     maze.goto(0, 0)
